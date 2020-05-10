@@ -6,7 +6,7 @@
 
 module.exports = {
 	siteMetadata: {
-		title: 'Full-Stack Bootcamp',
+		title: 'nobuhiroharada.com',
 		author: 'Nobuhiro Harada'
 	},
 	pathPrefix: '/nobuhiroharada_com',
