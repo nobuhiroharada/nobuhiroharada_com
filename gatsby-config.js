@@ -9,6 +9,7 @@ module.exports = {
 		title: 'Full-Stack Bootcamp',
 		author: 'Nobuhiro Harada'
 	},
+	pathPrefix: '/nobuhiroharada_com',
 	plugins: [
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sass',
