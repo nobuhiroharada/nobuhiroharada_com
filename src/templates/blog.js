@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
+import blogStyles from './blog.module.scss'
 
 export const query = graphql`
 	query ( $slug: String! ) {
@@ -19,9 +20,11 @@ const Blog = (props) => {
 	return (
 		<Layout>
 			<Head title={props.data.markdownRemark.frontmatter.title}/>
-			<h1>{props.data.markdownRemark.frontmatter.title}</h1>
-			<p>{props.data.markdownRemark.frontmatter.date}</p>
-			<div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
+			<div className={blogStyles.content}>
+				<h1>{props.data.markdownRemark.frontmatter.title}</h1>
+				<p>{props.data.markdownRemark.frontmatter.date}</p>
+				<div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
+			</div>
 		</Layout>
 	)
 }

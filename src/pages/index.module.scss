@@ -2,6 +2,10 @@ ul {
 	padding: 0;
 }
 
+.content {
+	width: 75%;
+}
+
 .posts {
 	list-style-type: none;
 	margin: 0;
@@ -29,5 +33,12 @@ ul {
 	p {
 		color: #777777;
 		font-size: .8rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	.content {
+		width: 100%;
 	}
 }
