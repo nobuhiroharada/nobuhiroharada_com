@@ -11,7 +11,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "gatsby": "^2.21.13",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
+    "gh-pages": "^2.2.0",
     "prettier": "2.0.5"
   },
   "repository": {
@@ -37,5 +40,6 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://nobuhiroharada.github.io/nobuhiroharada_com_site/"
 }
