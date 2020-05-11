@@ -16,7 +16,19 @@ const Sidebar = () => {
 
 	return (
 		<div className={sidebarStyles.content}>
-			サイドバー工事中
+			<h3>Tags</h3>
+			<div className={sidebarStyles.tags}>
+				<Link 
+					to="/tag/php/"
+					className={sidebarStyles.tag}>
+					php
+				</Link>
+				<Link 
+					to="/tag/javascript/"
+					className={sidebarStyles.tag}>
+					javascript
+				</Link>
+			</div>
 		</div>
 	)
 }
