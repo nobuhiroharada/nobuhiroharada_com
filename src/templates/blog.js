@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
@@ -10,6 +10,7 @@ export const query = graphql`
 		markdownRemark ( fields: { slug: { eq: $slug } } ) {
 			frontmatter {
 				title
+				tags
 			}
 			html
 		}
@@ -17,13 +18,28 @@ export const query = graphql`
 `
 
 const Blog = (props) => {
+
+	const frontmatter = props.data.markdownRemark.frontmatter
+
 	return (
 		<Layout>
-			<Head title={props.data.markdownRemark.frontmatter.title}/>
+			<Head title={frontmatter.title}/>
 			<div className={blogStyles.content}>
-				<h1>{props.data.markdownRemark.frontmatter.title}</h1>
-				<p>{props.data.markdownRemark.frontmatter.date}</p>
+				<h1>{frontmatter.title}</h1>
+				<p>{frontmatter.date}</p>
 				<div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
+				<div className={blogStyles.tags}>
+
+				{frontmatter.tags && frontmatter.tags.map(tag => (
+					<Link 
+						to={`/tag/${tag}`}
+						key={tag}
+						className={blogStyles.tag}>
+
+						{tag}
+					</Link>
+				))}
+				</div>
 			</div>
 		</Layout>
 	)
