@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
-import indexStyles from '../pages/index.module.scss'
+import indexStyles from '../pages/index.module.scss' // Homeと同じSCSS
 
 export const data = graphql`
 	query ( $tag: String ){
