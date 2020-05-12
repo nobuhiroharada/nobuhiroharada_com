@@ -11,8 +11,7 @@ const AboutPage = () => {
 			<Head title="About"/>
 			<div className={aboutStyles.content}>
 				<h1>About</h1>
-				<p>工事中</p>
-				<p><Link to="/">TOPに戻る</Link></p>
+				<a href="https://nobuhiroharada.github.io/simple-resume/" target="_blank">オンラインレジュメへ</a>
 			</div>
 		</Layout>
 	)
