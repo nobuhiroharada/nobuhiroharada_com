@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import sidebarStyles from './sidebar.module.scss'
 
-const Sidebar = (props) => {
+const Sidebar = () => {
 
 	const data = useStaticQuery(graphql`
 		query {
@@ -12,6 +12,7 @@ const Sidebar = (props) => {
 					node {
 						frontmatter {
 							tags
+							archive
 						}
 					}
 				}
@@ -19,16 +20,24 @@ const Sidebar = (props) => {
 		}
 	`)
 	
+
 	let tagArray = []
-	const tagEdges = data.allMarkdownRemark.edges
-	tagEdges.forEach((edge) => {
+	let archiveArray = []
+
+	data.allMarkdownRemark.edges.forEach((edge) => {
+
 		if(edge.node.frontmatter.tags) {
 			edge.node.frontmatter.tags.forEach((tag) => {
 				tagArray.push(tag)
 			})
 		}
+
+		if(edge.node.frontmatter.archive) {
+			archiveArray.push(edge.node.frontmatter.archive)
+		}
 	})
 
+	// タグ
 	let tagDict = []
 	for(let key of tagArray){
 		tagDict[key] = tagArray.filter(function(x){return x==key}).length;
@@ -36,14 +45,30 @@ const Sidebar = (props) => {
 
 	let tagLinks = []
 	for(let key in tagDict) {
-		tagLinks.push(<Link to={`/tag/${key}`} className={sidebarStyles.tag}>{key}({tagDict[key]})</Link>)
+		tagLinks.push(<Link to={`/tag/${key}`} className={sidebarStyles.tag} key={key}>{key}({tagDict[key]})</Link>)
 	}
 
+	// アーカイブ
+	let archiveDict = []
+	for(let key of archiveArray){
+		archiveDict[key] = archiveArray.filter(function(x){return x==key}).length;
+	}
+
+	let archiveLinks = []
+	for(let key in archiveDict) {
+		archiveLinks.push(<Link to={`/archive/${key}`} className={sidebarStyles.tag} key={key}>{key}({archiveDict[key]})</Link>)
+	}
+
+
 	return (
-		<div className={sidebarStyles.content}>
+		<div className={sidebarStyles.contents}>
 			<h3>Tags</h3>
-			<div className={sidebarStyles.tags}>
+			<div className={sidebarStyles.content}>
 				{tagLinks}
+			</div>
+			<h3>Archives</h3>
+			<div className={sidebarStyles.content}>
+				{archiveLinks}
 			</div>
 		</div>
 	)
