@@ -1,9 +1,9 @@
-.content {
+.contents {
 	width: 25%;
 	padding: 0 2rem;
 }
 
-.tags {
+.content {
 
 	margin: 2rem 0 2rem 0;
 	font-size: .8rem;
@@ -22,13 +22,10 @@
 	}
 }
 
-.tag {
-	margin-right: 0.5rem;
-}
 
 @media screen and (max-width: 600px) {
 
-	.content {
+	.contents {
 		width: 100%;
 		padding: 2rem 0;
 	}

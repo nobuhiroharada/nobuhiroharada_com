@@ -5,10 +5,10 @@ import Layout from '../components/layout'
 import indexStyles from '../pages/index.module.scss' // Homeと同じSCSS
 
 export const data = graphql`
-	query ( $tag: String ){
+	query ( $archive: Date ){
 		allMarkdownRemark (
 			limit: 100
-			filter: { frontmatter: { tags: { in: [$tag] }} }
+			filter: { frontmatter: { archive: { eq: $archive }} }
 			sort: { fields: [frontmatter___date], order: DESC }
 		) {
 			edges {
@@ -26,14 +26,14 @@ export const data = graphql`
 	}
 `
 
-const TagPage = (props) => {
+const ArchivePage = (props) => {
 
-	const tag = props.pageContext.tag;
+	const archive = props.pageContext.archive;
 
 	return (
 		<Layout>
 			<div className={indexStyles.content}>
-				<h2>Posts tagged as "{tag}"</h2>
+				<h2>Posts archived at "{archive}"</h2>
 				<ul className={indexStyles.posts}>
 					{props.data.allMarkdownRemark.edges.map((edge, index) => {
 						return (
@@ -51,4 +51,4 @@ const TagPage = (props) => {
 	)
 }
 
-export default TagPage
+export default ArchivePage
