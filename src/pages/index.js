@@ -7,7 +7,10 @@ import indexStyles from './index.module.scss'
 const IndexPage = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			allMarkdownRemark {
+			allMarkdownRemark (
+				limit: 100
+				sort: { fields: [frontmatter___date], order: DESC }
+			){
 				edges {
 					node {
 						frontmatter {
