@@ -43,8 +43,13 @@ const Sidebar = () => {
 		tagDict[key] = tagArray.filter(function(x){return x==key}).length;
 	}
 
+	let orderedTag = {}
+	Object.keys(tagDict).sort().forEach(function(key) {
+		orderedTag[key] = tagDict[key];
+	});
+
 	let tagLinks = []
-	for(let key in tagDict) {
+	for(let key in orderedTag) {
 		tagLinks.push(<Link to={`/tag/${key}`} className={sidebarStyles.tag} key={key}>{key}({tagDict[key]})</Link>)
 	}
 
@@ -54,8 +59,13 @@ const Sidebar = () => {
 		archiveDict[key] = archiveArray.filter(function(x){return x==key}).length;
 	}
 
+	let orderedArchive = {}
+	Object.keys(archiveDict).sort().reverse().forEach(function(key) {
+		orderedArchive[key] = archiveDict[key];
+	});
+	
 	let archiveLinks = []
-	for(let key in archiveDict) {
+	for(let key in orderedArchive) {
 		archiveLinks.push(<Link to={`/archive/${key}`} className={sidebarStyles.tag} key={key}>{key}({archiveDict[key]})</Link>)
 	}
 
