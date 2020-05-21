@@ -39,6 +39,23 @@ module.exports.createPages = async ({ graphql, actions }) => {
 		}
 	`)
 
+	// ブログリスト ページネーション
+	const posts = res.data.allMarkdownRemark.edges
+	const postsPerPage = 5
+	const numPages = Math.ceil(posts.length / postsPerPage)
+	Array.from({ length: numPages }).forEach((_, i) => {
+		createPage({
+			path: i === 0 ? `/blog/1` : `/blog/${i + 1}`,
+			component: path.resolve("./src/templates/blogList.js"),
+			context: {
+				limit: postsPerPage,
+				skip: i * postsPerPage,
+				numPages,
+				currentPage: i + 1,
+			},
+		})
+	})
+
 	let tagSet = new Set();
 
 	res.data.allMarkdownRemark.edges.forEach((edge) => {
