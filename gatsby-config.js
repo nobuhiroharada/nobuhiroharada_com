@@ -7,11 +7,13 @@
 module.exports = {
 	siteMetadata: {
 		title: 'nobuhiroharada.com',
-		author: 'Nobuhiro Harada'
+		author: 'Nobuhiro Harada',
+		siteUrl: 'https://goofy-mestorf-c03a7c.netlify.app'
 	},
 	pathPrefix: '/nobuhiroharada_com',
 	plugins: [
 		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-sitemap',
 		'gatsby-plugin-sass',
 		{
 			resolve: 'gatsby-source-filesystem',
