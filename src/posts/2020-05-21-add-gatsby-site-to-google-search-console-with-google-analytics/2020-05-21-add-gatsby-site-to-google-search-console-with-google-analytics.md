@@ -37,6 +37,11 @@ gatsby-config.js の options に head: true を設定します。
 
 ![IMG](./2020-05-21-add-gatsby-site-to-google-search-console-with-google-analytics-1.png)
 
-これだけで Google Search Console に登録され、サイトマップの追加などができるようになります。
+これで Google Search Console に登録され、サイトマップの追加などができるようになります。
 
 以上になります。
+
+**参考**
+
+Add a Gatsby site to the Google Search Console with Google Analytics
+https://vincentdnl.com/add-gatsby-site-to-google-search-console-with-google-analytics/
