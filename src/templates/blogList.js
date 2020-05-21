@@ -3,33 +3,34 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
 import Pagination from '../components/pagination'
-import indexStyles from './index.module.scss'
+import indexStyles from '../pages/index.module.scss'
 
-const IndexPage = () => {
-	const data = useStaticQuery(graphql`
-		query {
-			allMarkdownRemark (
-				sort: { fields: [frontmatter___date], order: DESC }
-			){
-				edges {
-					node {
-						frontmatter {
-							title
-							date
-						}
-						fields {
-							slug
-						}
+export const data = graphql`
+	query ($skip: Int!, $limit: Int!) {
+		allMarkdownRemark (
+			sort: { fields: [frontmatter___date], order: DESC }
+			limit: $limit
+			skip: $skip
+		){
+			edges {
+				node {
+					frontmatter {
+						title
+						date
+					}
+					fields {
+						slug
 					}
 				}
 			}
 		}
-	`)
-	
-	const posts = data.allMarkdownRemark.edges
-	const postsPerPage = 5
-	const numPages = Math.ceil(posts.length / postsPerPage)
-	const currentPage = 1
+	}
+`
+
+const BlogList = (props) => {
+
+	const numPages = props.pageContext.numPages
+	const currentPage = props.pageContext.currentPage
 
 	let pagination = []
 	for(let i=1; i<=numPages; i++) {
@@ -41,11 +42,10 @@ const IndexPage = () => {
 	}
 
 	return (
-		
 		<Layout>
 			<div className={indexStyles.content}>
 				<ul className={indexStyles.posts}>
-					{data.allMarkdownRemark.edges.slice(0, postsPerPage).map((edge, index) => {
+					{props.data.allMarkdownRemark.edges.map((edge, index) => {
 						return (
 							<li className={indexStyles.post} key={index}>
 								<Link to={`/blog/${edge.node.fields.slug}`}>
@@ -56,13 +56,10 @@ const IndexPage = () => {
 						)
 					})}
 				</ul>
-				<div className={indexStyles.pagination}>
-					{pagination}
-				</div>
-				
+				<Pagination props={props}/>
 			</div>
 		</Layout>
 	)
 }
 
-export default IndexPage
+export default BlogList
