@@ -10,6 +10,8 @@ tags:
 
 Gatsbyのプラグイン "gatsby-plugin-sitemap" を追加して、sitemap.xml を出力しようとしたのですが、下記エラーになり追加できませんでした。
 
+<br />
+
     Error: Cannot query field "siteUrl" on type "SiteSiteMetadata".
     GraphQL request:5:11
     4 |         siteMetadata {
@@ -17,18 +19,24 @@ Gatsbyのプラグイン "gatsby-plugin-sitemap" を追加して、sitemap.xml �
     |           ^
     6 |         }
 
+<br />
+
 ### 対処法
 
 gatsby-config.js の siteMetadata に siteUrl を追記することでエラーは解消されました。
 
-修正前
+<br />
+
+**修正前**
 
     siteMetadata: {
         title: 'nobuhiroharada.com',
         author: 'Nobuhiro Harada'
     },
 
-修正後
+<br />
+
+**修正後**
 
     siteMetadata: {
         title: 'nobuhiroharada.com',
@@ -36,20 +44,25 @@ gatsby-config.js の siteMetadata に siteUrl を追記することでエラー�
         siteUrl: 'localhost:8000'
     },
 
-これでビルドすると、ブラウザでsitemap.xmlが確認できました。
+<br />
 
-![IMG](./2020-05-20-gatsby-sitemap-plugin-error-1.png)
+これでビルドすると、ブラウザにて http://localhost:8000/sitemap.xml アクセスするとサイトマップ確認できました。
 
-出力先のpage-dataフォルダ直下にsitemap.xmlが出力されています。
+<br />
 
-![IMG](./2020-05-20-gatsby-sitemap-plugin-error-2.png)
+出力先のpage-dataフォルダ直下にもsitemap.xmlが出力されます。
+
+<br />
 
 以上になります。
 
+<br />
+
 ### 参考
 Issues with Sitemap plugin integration
-
 https://github.com/gatsbyjs/gatsby/issues/2407#issuecomment-495950517
+
+<br />
 
 Gatsby公式サイト　サイトマッププラグイン追加手順
 https://www.gatsbyjs.org/docs/creating-a-sitemap/
