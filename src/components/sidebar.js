@@ -50,7 +50,7 @@ const Sidebar = () => {
 
 	let tagLinks = []
 	for(let key in orderedTag) {
-		tagLinks.push(<Link to={`/tag/${key}`} className={sidebarStyles.tag} key={key}>{key}({tagDict[key]})</Link>)
+		tagLinks.push(<Link to={`/tag/${key}`} className={sidebarStyles.tag} key={key}>{key} ({tagDict[key]})</Link>)
 	}
 
 	// アーカイブ
@@ -66,7 +66,7 @@ const Sidebar = () => {
 	
 	let archiveLinks = []
 	for(let key in orderedArchive) {
-		archiveLinks.push(<Link to={`/archive/${key}`} className={sidebarStyles.tag} key={key}>{key}({archiveDict[key]})</Link>)
+		archiveLinks.push(<Link to={`/archive/${key}`} className={sidebarStyles.tag} key={key}>{key} ({archiveDict[key]})</Link>)
 	}
 
 
