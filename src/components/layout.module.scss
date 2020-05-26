@@ -1,8 +1,13 @@
 .container {
+	font-family: "Helvetica Neue",
+				Arial,
+				"Hiragino Kaku Gothic ProN",
+				"Hiragino Sans",
+				Meiryo,
+				sans-serif;
 	margin: 0 auto;
 	max-width: 750px;
 	padding: 1rem;
-	// display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
