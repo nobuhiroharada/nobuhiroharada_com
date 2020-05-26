@@ -10,9 +10,13 @@ tags:
 
 Google Analyticsのプラグイン、'gatsby-plugin-google-analytics' を使用
 
+<br />
+
 ### 登録方法
 
 gatsby-config.js の options に head: true を設定します。
+
+<br />
 
 **修正前**
 
@@ -22,6 +26,8 @@ gatsby-config.js の options に head: true を設定します。
             trackingId: "UA-XXXXXXXXX-X",
         },
     },
+
+<br />
 
 **修正後**
 
@@ -33,13 +39,19 @@ gatsby-config.js の options に head: true を設定します。
         },
     },
 
+<br />
+
 登録後、Google Search Consoleからプロパティの追加 -> プロパティの選択 -> 所有権の確認 で Google Analytics を選択します。
 
-![IMG](./2020-05-21-image-1.png)
+<br />
 
 これで Google Search Console に登録され、サイトマップの追加などができるようになります。
 
+<br />
+
 以上になります。
+
+<br />
 
 **参考**
 
