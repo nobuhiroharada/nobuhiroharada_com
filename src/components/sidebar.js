@@ -40,7 +40,7 @@ const Sidebar = () => {
 	// タグ
 	let tagDict = []
 	for(let key of tagArray){
-		tagDict[key] = tagArray.filter(function(x){return x==key}).length;
+		tagDict[key] = tagArray.filter(function(x){return x===key}).length;
 	}
 
 	let orderedTag = {}
@@ -56,7 +56,7 @@ const Sidebar = () => {
 	// アーカイブ
 	let archiveDict = []
 	for(let key of archiveArray){
-		archiveDict[key] = archiveArray.filter(function(x){return x==key}).length;
+		archiveDict[key] = archiveArray.filter(function(x){return x===key}).length;
 	}
 
 	let orderedArchive = {}
