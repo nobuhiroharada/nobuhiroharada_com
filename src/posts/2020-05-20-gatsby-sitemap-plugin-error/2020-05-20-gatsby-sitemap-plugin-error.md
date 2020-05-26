@@ -6,6 +6,12 @@ tags:
   - gatsby
 ---
 
+### 検証環境
+
+Gatsby 2.21.13
+
+<br />
+
 ### エラー内容
 
 Gatsbyのプラグイン "gatsby-plugin-sitemap" を追加して、sitemap.xml を出力しようとしたのですが、下記エラーになり追加できませんでした。

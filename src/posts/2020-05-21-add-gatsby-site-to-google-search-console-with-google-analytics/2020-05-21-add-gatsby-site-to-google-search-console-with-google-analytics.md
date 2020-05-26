@@ -6,6 +6,12 @@ tags:
   - gatsby
 ---
 
+### 検証環境
+
+Gatsby 2.21.13
+
+<br />
+
 ### 前提条件
 
 Google Analyticsのプラグイン、'gatsby-plugin-google-analytics' を使用
