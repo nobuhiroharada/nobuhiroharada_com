@@ -3,7 +3,7 @@ title: "[MySQL] Macのターミナルだと日本語のデータがはてな(?)�
 date: "2020-02-22"
 archive: "2020-02"
 tags:
-  - mysql
+  - MySQL
 ---
 
 ### MySQLの日本語データがはてな(?)に文字化けする

@@ -3,7 +3,7 @@ title: "Gatsbyで作ったサイトをGoogle Analyticsを使って、Google Sear
 date: "2020-05-21"
 archive: "2020-05"
 tags:
-  - gatsby
+  - Gatsby
 ---
 
 ### 検証環境
