@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
+import Sidebar from '../components/sidebar'
 import Pagination from '../components/pagination'
 import indexStyles from './index.module.scss'
 
@@ -56,11 +57,12 @@ const IndexPage = () => {
 						)
 					})}
 				</ul>
+				
 				<div className={indexStyles.pagination}>
 					{pagination}
 				</div>
-				
 			</div>
+			<Sidebar />
 		</Layout>
 	)
 }

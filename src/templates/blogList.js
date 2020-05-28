@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
+import Sidebar from '../components/sidebar'
 import Pagination from '../components/pagination'
 import indexStyles from '../pages/index.module.scss'
 
@@ -58,6 +59,7 @@ const BlogList = (props) => {
 				</ul>
 				<Pagination props={props}/>
 			</div>
+			<Sidebar />
 		</Layout>
 	)
 }

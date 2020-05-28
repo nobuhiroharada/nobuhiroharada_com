@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import Sidebar from '../components/sidebar'
 import indexStyles from '../pages/index.module.scss' // Homeと同じSCSS
 
 export const data = graphql`
@@ -47,6 +48,7 @@ const TagPage = (props) => {
 					})}
 				</ul>
 			</div>
+			<Sidebar />
 		</Layout>
 	)
 }
