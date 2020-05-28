@@ -8,7 +8,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'nobuhiroharada.com',
 		author: 'Nobuhiro Harada',
-		siteUrl: 'https://goofy-mestorf-c03a7c.netlify.app'
+		siteUrl: 'https://nobuhiroharada.com'
 	},
 	pathPrefix: '/nobuhiroharada_com',
 	plugins: [
