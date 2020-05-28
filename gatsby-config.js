@@ -37,6 +37,13 @@ module.exports = {
 					},
 					{
 						resolve: `gatsby-remark-prismjs`
+					},
+					{
+						resolve: "gatsby-remark-external-links",
+							options: {
+							target: "_blank",
+							rel: "nofollow"
+						}
 					}
 				]
 			}
