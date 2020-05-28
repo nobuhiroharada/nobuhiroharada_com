@@ -24,11 +24,14 @@ from time import sleep
 
 # ブラウザを開く。
 driver = webdriver.Chrome()
+
 # HTMLクイック・リファレンスさんのホームページを開く
 driver.get("http://www.htmq.com/html5/iframe.shtml")
+
 # 「ヒント 未来からやってきたネコ型ロボットという設定でした。」 というテキストを取りたい
 # XPATH は「/html/body/p」
 text_hint = driver.find_element_by_xpath("/html/body/p").text
+
 print text_hint
 
 sleep(10)
@@ -73,14 +76,19 @@ from time import sleep
 
 # ブラウザを開く。
 driver = webdriver.Chrome()
+
 # HTMLクイック・リファレンスさんのホームページを開く
 driver.get("http://www.htmq.com/html5/iframe.shtml")
+
 # iframe の XPATH 「//*[@id='content_left']/div[10]/iframe」 を指定
 iframe = driver.find_element_by_xpath("//*[@id='content_left']/div[10]/iframe")
+
 # driver を切り替える
 driver.switch_to_frame(iframe)
+
 # 「ヒント 未来からやってきたネコ型ロボットという設定でした。」 というテキストを取りたい
 text_hint = driver.find_element_by_xpath("/html/body/p").text
+
 print text_hint
 
 sleep(10)
