@@ -5,7 +5,6 @@ archive: "2019-09"
 tags:
   - ARKit
   - Unity
-  - Blender
 ---
 
 AppleのARKit3を利用した　UnityのARFoundation HumanBodyTracking3D は一体どれくらい人の動きを追えるのかいろんな動作を検証してみました。
