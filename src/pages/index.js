@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
 import Sidebar from '../components/sidebar'
+import Head from '../components/head'
 import Pagination from '../components/pagination'
 import indexStyles from './index.module.scss'
 
@@ -44,6 +45,7 @@ const IndexPage = () => {
 	return (
 		
 		<Layout>
+			<Head title="Home"/>
 			<div className={indexStyles.content}>
 				<ul className={indexStyles.posts}>
 					{data.allMarkdownRemark.edges.slice(0, postsPerPage).map((edge, index) => {

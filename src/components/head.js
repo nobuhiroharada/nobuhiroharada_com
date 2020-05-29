@@ -12,8 +12,15 @@ const Head = ({ title }) => {
 			}
 		}
 	`)
+
+	let titleTag = `${title} | ${data.site.siteMetadata.title}`
+
+	if(title === "Home") {
+		titleTag = `${data.site.siteMetadata.title}`
+	}
+
 	return (
-		<Helmet title={`${title} | ${data.site.siteMetadata.title}`}/>
+		<Helmet title={titleTag}/>
 	)
 }
 
