@@ -8,7 +8,7 @@ import aboutStyles from './about.module.scss'
 const AboutPage = () => {
 	return (
 		<Layout>
-			<Head title="About"/>
+			<Head title="About" description="nobuhiroharada.com about page"/>
 			<div className={aboutStyles.content}>
 				<h1>About</h1>
 				<a href="https://nobuhiroharada.github.io/simple-resume/" target="_blank">オンラインレジュメへ</a>

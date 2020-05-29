@@ -8,7 +8,10 @@ module.exports = {
 	siteMetadata: {
 		title: 'nobuhiroharada.com',
 		author: 'Nobuhiro Harada',
-		siteUrl: 'https://nobuhiroharada.com'
+		description: 'nobuhiroharada.com',
+		siteUrl: 'https://nobuhiroharada.com',
+		image: `${__dirname}/static/sns-share.png`,
+		twitterUsername: "@nobuhiro_harada"
 	},
 	pathPrefix: '/nobuhiroharada_com',
 	plugins: [
