@@ -24,7 +24,7 @@ const Blog = (props) => {
 
 	return (
 		<Layout>
-			<Head title={frontmatter.title}/>
+			<Head title={frontmatter.title} />
 			<div className={blogStyles.content}>
 				<h1>{frontmatter.title}</h1>
 				<p className={blogStyles.date}>{frontmatter.date}</p>
