@@ -10,7 +10,7 @@ module.exports = {
 		author: 'Nobuhiro Harada',
 		description: 'nobuhiroharada.com',
 		siteUrl: 'https://nobuhiroharada.com',
-		image: `${__dirname}/static/sns-share.png`,
+		image: '/sns-share.png',
 		twitterUsername: "@nobuhiro_harada"
 	},
 	pathPrefix: '/nobuhiroharada_com',
