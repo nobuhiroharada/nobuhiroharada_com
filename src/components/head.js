@@ -27,8 +27,8 @@ const Head = ({ title, description }) => {
 
 	let descriptionMeta = description || defaults.description
 	let urlMeta = defaults.siteUrl
-	let imageMeta = defaults.image
-	
+	let imageMeta = `${defaults.siteUrl}${defaults.image}`
+
 	return (
 		<Helmet>
 			<title>{titleMeta}</title>
