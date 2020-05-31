@@ -20,11 +20,6 @@ const Head = ({ title, description }) => {
 	const defaults = data.site.siteMetadata;
 
 	let titleMeta = `${title} | ${defaults.title}`
-
-	if(title === "Home") {
-		titleMeta = `${defaults.title}`
-	}
-
 	let descriptionMeta = description || defaults.description
 	let urlMeta = defaults.siteUrl
 	let imageMeta = `${defaults.siteUrl}${defaults.image}`

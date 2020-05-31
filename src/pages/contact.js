@@ -7,7 +7,7 @@ import contactStyles from './contact.module.scss'
 const ContactPage = () => {
 	return (
 		<Layout>
-			<Head title="Contact" description={"nobuhiroharada.com contact page"}/>
+			<Head title="Contact" description="Contact page"/>
 			<div className={contactStyles.content}>
 				<h1>Contact</h1>
 				

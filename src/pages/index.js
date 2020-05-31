@@ -45,7 +45,7 @@ const IndexPage = () => {
 	return (
 		
 		<Layout>
-			<Head title="Home"/>
+			<Head title="Home" description="Home page"/>
 			<div className={indexStyles.content}>
 				<ul className={indexStyles.posts}>
 					{data.allMarkdownRemark.edges.slice(0, postsPerPage).map((edge, index) => {
