@@ -27,9 +27,6 @@ const Blog = (props) => {
 			<Head title="Blog" description={frontmatter.title}/>
 			<div className={blogStyles.content}>
 				<h1>{frontmatter.title}</h1>
-				<p className={blogStyles.date}>{frontmatter.date}</p>
-				<br />
-				<div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
 				<div className={blogStyles.tags}>
 					{frontmatter.tags && frontmatter.tags.map(tag => (
 						<Link 
@@ -40,6 +37,9 @@ const Blog = (props) => {
 						</Link>
 					))}
 				</div>
+				<p className={blogStyles.date}>{frontmatter.date}</p>
+				<br />
+				<div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
 			</div>
 		</Layout>
 	)
