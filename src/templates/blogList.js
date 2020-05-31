@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/layout'
+import Head from '../components/head'
 import Sidebar from '../components/sidebar'
 import Pagination from '../components/pagination'
 import indexStyles from '../pages/index.module.scss'
@@ -44,6 +45,7 @@ const BlogList = (props) => {
 
 	return (
 		<Layout>
+			<Head title="Blog list" description="Blog list page"/>
 			<div className={indexStyles.content}>
 				<ul className={indexStyles.posts}>
 					{props.data.allMarkdownRemark.edges.map((edge, index) => {
