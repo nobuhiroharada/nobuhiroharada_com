@@ -58,5 +58,18 @@ module.exports = {
 				head: true
 			},
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: "nobuhiroharada.com",
+				short_name: "nobuhara",
+				start_url: "/",
+				background_color: "#ffffff",
+				theme_color: "#000000",
+				display: "standalone",
+				icon: "src/images/icon.png"
+			},
+		},
+		'gatsby-plugin-offline',
 	],
 }
