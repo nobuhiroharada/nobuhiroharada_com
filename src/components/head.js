@@ -19,26 +19,26 @@ const Head = ({ title, description }) => {
 
 	const defaults = data.site.siteMetadata;
 
-	let titleMeta = `${title} | ${defaults.title}`
-	let descriptionMeta = description || defaults.description
-	let urlMeta = defaults.siteUrl
-	let imageMeta = `${defaults.siteUrl}${defaults.image}`
+	let pageTitle = `${title} | ${defaults.title}`
+	let pageDescription = description || defaults.description
+	let pageUrl = defaults.siteUrl
+	let pageImage = `${defaults.siteUrl}${defaults.image}`
 
 	return (
 		<Helmet>
-			<title>{titleMeta}</title>
-			<meta name="description" content={descriptionMeta} />
-			<meta property="og:url" content={urlMeta} />
+			<title>{pageTitle}</title>
+			<meta name="description" content={pageDescription} />
+			<meta property="og:url" content={pageUrl} />
 			<meta property="og:type" content="article" />
-			<meta property="og:title" content={titleMeta} />
-			<meta property="og:description" content={descriptionMeta} />
-			<meta property="og:image" content={imageMeta} />
+			<meta property="og:title" content={pageTitle} />
+			<meta property="og:description" content={pageDescription} />
+			<meta property="og:image" content={pageImage} />
 
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:creator" content={defaults.twitterUsername} />
-			<meta name="twitter:title" content={titleMeta} />
-			<meta name="twitter:description" content={descriptionMeta} />
-			<meta name="twitter:image" content={imageMeta} />
+			<meta name="twitter:title" content={pageTitle} />
+			<meta name="twitter:description" content={pageDescription} />
+			<meta name="twitter:image" content={pageImage} />
 		</Helmet>
 	)
 }
