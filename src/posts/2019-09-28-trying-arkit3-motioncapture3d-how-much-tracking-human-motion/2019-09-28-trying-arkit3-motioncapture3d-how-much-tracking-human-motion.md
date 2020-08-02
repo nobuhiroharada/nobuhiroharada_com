@@ -1,7 +1,6 @@
 ---
 title: "Unityの ARFoundation HumanBodyTracking3D の精度を検証してみた！"
 date: "2019-09-28"
-archive: "2019-09"
 tags:
   - ARKit
   - Unity

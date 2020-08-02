@@ -1,7 +1,6 @@
 ---
 title: "MySQL 5.5 のFULLTEXTインデックスはMyISAM エンジンにしか対応してない"
 date: "2019-11-10"
-archive: "2019-11"
 tags:
   - MySQL
 ---

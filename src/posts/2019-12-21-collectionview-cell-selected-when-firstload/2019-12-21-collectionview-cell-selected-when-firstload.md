@@ -1,7 +1,6 @@
 ---
 title: "SwiftのCollectionViewで初回起動時に前回選択していたセルを選択状態にしたい時"
 date: "2019-12-21"
-archive: "2019-12"
 tags:
   - Swift
 ---

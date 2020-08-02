@@ -1,7 +1,7 @@
 ---
 title: "[Laravel]Cache::putメソッドの引数の時間単位が5.7以前は「分」、5.8以降は「秒」になっている件"
 date: "2020-07-28"
-archive: "2020-07"
+archive: "2020/07"
 tags:
   - Laravel
 ---

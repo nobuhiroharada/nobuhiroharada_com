@@ -1,7 +1,6 @@
 ---
 title: "Gatsbyのサイトマップ対応のプラグインがエラーになる"
 date: "2020-05-20"
-archive: "2020-05"
 tags:
   - Gatsby
 ---
