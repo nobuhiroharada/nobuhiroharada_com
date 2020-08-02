@@ -28,7 +28,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
 					node {
 						frontmatter {
 							tags
-							archive
+							year: date(formatString: "YYYY")
+							month: date(formatString: "MM")
 						}
 						fields {
 							slug
@@ -39,8 +40,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
 		}
 	`)
 
-	// ブログリスト ページネーション
 	const posts = res.data.allMarkdownRemark.edges
+
+	// ブログリスト ページネーション
 	const postsPerPage = 5
 	const numPages = Math.ceil(posts.length / postsPerPage)
 	Array.from({ length: numPages }).forEach((_, i) => {
@@ -57,12 +59,14 @@ module.exports.createPages = async ({ graphql, actions }) => {
 	})
 
 	let tagSet = new Set();
+	let years = new Set();
+	let yearMonths = new Set();
 
-	res.data.allMarkdownRemark.edges.forEach((edge) => {
+	posts.forEach((post) => {
 
 		// タグ
-		if (edge.node.frontmatter.tags) {
-			edge.node.frontmatter.tags.forEach((tag) => {
+		if (post.node.frontmatter.tags) {
+			post.node.frontmatter.tags.forEach((tag) => {
 				tagSet.add(tag);
 			});
 		}
@@ -78,23 +82,56 @@ module.exports.createPages = async ({ graphql, actions }) => {
 			});
 		});
 
-		// アーカイブ
-		createPage({
-			path: `/archive/${edge.node.frontmatter.archive}/`,
-			component: archiveTemplate,
-			context: {
-				archive: edge.node.frontmatter.archive,
-			},
-		});
+		const { year, month } = post.node.frontmatter;
+
+		// 年、年月をまとめる
+		years.add(year);
+		yearMonths.add(`${year}/${month}`);
 
 		// ブログ内容
 		createPage({
-			path: `/blog/${edge.node.fields.slug}`,
+			path: `/blog/${post.node.fields.slug}`,
 			component: blogPostTemplate,
 			context: {
-				slug: edge.node.fields.slug
+				slug: post.node.fields.slug
 			}
 		})
 	})
+
+	// アーカイブ(年別ページ)
+	years.forEach(year => {
+		createPage({
+			path: `archive/${year}/`,
+			component: archiveTemplate,
+			context: {
+				archive: year,
+				startDate: `${year}-01-01T00:00:00.000Z`,
+				endDate: `${year}-12-31T23:59:59.999Z`
+			}
+		});
+	});
+
+	// アーカイブ(月別ページ)
+	yearMonths.forEach(yearMonth => {
+		const [year, month] = yearMonth.split('/')
+		const startDate = `${year}-${month}-01T00:00:00.000Z`;
+		const newStartDate = new Date(startDate);
+		// 月末日を取得
+		const endDate = new Date(
+		new Date(newStartDate.setMonth(newStartDate.getMonth() + 1)).getTime() -
+			1
+		).toISOString();
+
+		const archive = year + '-' +month
+		createPage({
+			path: `archive/${year}/${month}/`,
+			component: archiveTemplate,
+			context: {
+				archive: archive,
+				startDate: startDate,
+				endDate: endDate
+			}
+		});
+	});
 
 }

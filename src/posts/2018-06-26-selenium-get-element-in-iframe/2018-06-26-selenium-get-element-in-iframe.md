@@ -1,7 +1,6 @@
 ---
 title: "Seleniumでiframe内の要素を取得する"
 date: "2018-06-26"
-archive: "2018-06"
 tags:
   - Selenium
 ---

@@ -6,10 +6,10 @@ import Sidebar from '../components/sidebar'
 import indexStyles from '../pages/index.module.scss' // Homeと同じSCSS
 
 export const data = graphql`
-	query ( $archive: Date ){
+	query ( $startDate: Date, $endDate: Date ){
 		allMarkdownRemark (
 			limit: 100
-			filter: { frontmatter: { archive: { eq: $archive }} }
+			filter: { frontmatter: { date: { gte: $startDate, lt: $endDate }} }
 			sort: { fields: [frontmatter___date], order: DESC }
 		) {
 			edges {

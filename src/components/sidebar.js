@@ -12,7 +12,7 @@ const Sidebar = () => {
 					node {
 						frontmatter {
 							tags
-							archive
+							date(formatString: "YYYY-MM")
 						}
 					}
 				}
@@ -32,8 +32,8 @@ const Sidebar = () => {
 			})
 		}
 
-		if(edge.node.frontmatter.archive) {
-			archiveArray.push(edge.node.frontmatter.archive)
+		if(edge.node.frontmatter.date) {
+			archiveArray.push(edge.node.frontmatter.date)
 		}
 	})
 
@@ -66,7 +66,8 @@ const Sidebar = () => {
 	
 	let archiveLinks = []
 	for(let key in orderedArchive) {
-		archiveLinks.push(<Link to={`/archive/${key}`} className={sidebarStyles.tag} key={key}>{key} ({archiveDict[key]})</Link>)
+		let archiveLink = key.replace('-', '/')
+		archiveLinks.push(<Link to={`/archive/${archiveLink}`} className={sidebarStyles.tag} key={key}>{key} ({archiveDict[key]})</Link>)
 	}
 
 
