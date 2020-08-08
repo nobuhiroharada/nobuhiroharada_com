@@ -1,5 +1,34 @@
+$table-border: 1px solid #dddddd;
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	border: $table-border;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 6px;
+}
+th, td {
+	padding: 0.6rem;
+	border-bottom: $table-border;
+}
+
+table tbody tr:last-child th,
+table tbody tr:last-child td {
+	border-bottom: none;
+}
+
 .content {
 	width: 75%;
+}
+
+.table-year-month {
+	width: 25%;
+}
+
+.table-content {
+	width: 75%;
+	border-left: $table-border;
 }
 
 @media screen and (max-width: 600px) {
