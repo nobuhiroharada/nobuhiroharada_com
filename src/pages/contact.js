@@ -11,7 +11,7 @@ const ContactPage = () => {
 			<div className={contactStyles.content}>
 				<h1>Contact</h1>
 				
-				Twitter: <a href="https://twitter.com/nobuhiro_harada" target="_blank">@nobuhiro_harada</a>
+				Twitter: <a href="https://twitter.com/nobuhiro_harada" rel="noreferrer noopener" target="_blank">@nobuhiro_harada</a>
 			</div>
 		</Layout>
 	)

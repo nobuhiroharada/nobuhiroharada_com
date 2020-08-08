@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
@@ -11,7 +10,7 @@ const AboutPage = () => {
 			<Head title="About" description="About page"/>
 			<div className={aboutStyles.content}>
 				<h1>About</h1>
-				<a href="https://nobuhiroharada.github.io/simple-resume/" target="_blank">オンラインレジュメへ</a>
+				<a href="https://nobuhiroharada.github.io/simple-resume/" rel="noreferrer noopener" target="_blank">オンラインレジュメへ</a>
 			</div>
 		</Layout>
 	)
