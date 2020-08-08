@@ -4,7 +4,6 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 import Sidebar from '../components/sidebar'
 import Head from '../components/head'
-import Pagination from '../components/pagination'
 import indexStyles from './index.module.scss'
 
 const IndexPage = () => {
