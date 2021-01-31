@@ -46,7 +46,7 @@ const Footer = () => {
 				</a>
 			</div>
 			<div>
-				<p>Created by {data.site.siteMetadata.author} © 2020</p>
+				<p>Created by {data.site.siteMetadata.author} © {(new Date()).getFullYear()}</p>
 			</div>
 		</footer>
 	)
