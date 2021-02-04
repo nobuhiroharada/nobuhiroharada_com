@@ -11,17 +11,14 @@ const AboutPage = () => {
 			<Head title="About" description="About page"/>
 			<div className={aboutStyles.content}>
 				<h1>自己紹介</h1>
-				<p>はじめまして、原田順啓と申します。</p>
+				<p>はじめまして、原田順啓(はらだのぶひろ)と申します。</p>
 				<p>1982年生まれ。蠍座。</p>
-				<p>東京都目黒区在住。</p>
-				<p>好きなアーティストはBump Of Chicken。</p>
-				<p>趣味はバスケットボール(NBA, 国内学生)観戦、読書(マンガ、自己啓発、自伝、IT関連、政治経済金融など)、海外ドラマ、映画鑑賞です。</p>
 				<h1>スキル</h1>
 					<p>・言語：PHP, JavaScript, Swift</p>
 					<p>・フレームワーク：Laravel, Zend Framework</p>
 					<p>・データベース：MySQL, PostgreSQL</p>
 					<p>・OS：macOS, Linux, Windows</p>
-					<p>・その他：Git, Vi</p>
+					<p>・その他：Git</p>
 				<h1>ポートフォリオサイト</h1>	
 					<a href="https://nobuhiroharada.github.io/portfolio-2/" rel="noreferrer noopener" target="_blank">ポートフォリオサイトへ</a>
 				<h1>経歴</h1>
@@ -59,31 +56,35 @@ const AboutPage = () => {
 						</tr>
 						<tr>
 							<td className={aboutStyles.tableYearMonth}>2011年8月</td>
-							<td className={aboutStyles.tableContent}>東日本大震災の様子を関西からみていて、人間いつ死ぬかわからないと実感し、生きてる内にやりたいことやっておかないと、と思い立ち、埼玉県所沢市に住んでいた弟の元に転がり込む</td>
+							<td className={aboutStyles.tableContent}>埼玉県所沢市に住んでいた弟の元に転がり込む</td>
+						</tr>
+						<tr>
+							<td className={aboutStyles.tableYearMonth}>2011年10月</td>
+							<td className={aboutStyles.tableContent}>東京都新宿区高田馬場に移住</td>
 						</tr>
 						<tr>
 							<td className={aboutStyles.tableYearMonth}>2011年11月</td>
-							<td className={aboutStyles.tableContent}>時給の高さと仕事の多様さに驚きながら、派遣事務の仕事に就く</td>
-						</tr>
-						<tr>
-							<td className={aboutStyles.tableYearMonth}>2013年9月</td>
-							<td className={aboutStyles.tableContent}>これまで1度も利用したことがなかったハローワークを利用。職業訓練でAndroidアプリ開発の募集要項を見つけ、即効申し込む</td>
+							<td className={aboutStyles.tableContent}>派遣事務の仕事に就く</td>
 						</tr>
 						<tr>
 							<td className={aboutStyles.tableYearMonth}>2014年1月</td>
-							<td className={aboutStyles.tableContent}>職業訓練Androidアプリ開発を受講開始</td>
+							<td className={aboutStyles.tableContent}>職業訓練校でAndroidアプリ開発を受講する</td>
 						</tr>
 						<tr>
 							<td className={aboutStyles.tableYearMonth}>2014年9月</td>
-							<td className={aboutStyles.tableContent}>SES系の会社にアルバイトながらもプログラマーとして働き始める</td>
+							<td className={aboutStyles.tableContent}>SES系の会社にアルバイト時給1000円で働き始める</td>
 						</tr>
 						<tr>
 							<td className={aboutStyles.tableYearMonth}>2015年12月</td>
-							<td className={aboutStyles.tableContent}>派遣エンジニアとして働き始める</td>
+							<td className={aboutStyles.tableContent}>派遣プログラマーとして働き始める</td>
 						</tr>
 						<tr>
 							<td className={aboutStyles.tableYearMonth}>2020年2月</td>
 							<td className={aboutStyles.tableContent}>フリーランスとして働き始める</td>
+						</tr>
+						<tr>
+							<td className={aboutStyles.tableYearMonth}>2020年7月</td>
+							<td className={aboutStyles.tableContent}>東京都目黒区祐天寺に移住</td>
 						</tr>
 					</tbody>
 				</table>
