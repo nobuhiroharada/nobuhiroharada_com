@@ -1,5 +1,5 @@
 ---
-title: "Gatsbyのサイトマップ対応のプラグインがエラーになる"
+title: "Gatsbyのサイトマップ対応のプラグイン(gatsby-plugin-sitemap)がエラーになった時の対応例"
 date: "2020-05-20"
 tags:
   - Gatsby
