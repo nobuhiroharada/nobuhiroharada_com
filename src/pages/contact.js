@@ -9,7 +9,7 @@ const ContactPage = () => {
 		<Layout>
 			<Head title="Contact" description="Contact page"/>
 			<div className={contactStyles.content}>
-				<h1>Contact</h1>
+				<h2>お問い合わせ</h2>
 				
 				Twitter: <a href="https://twitter.com/nobuhiro_harada" rel="noreferrer noopener" target="_blank">@nobuhiro_harada</a>
 			</div>
