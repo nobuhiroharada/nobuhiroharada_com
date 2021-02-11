@@ -28,46 +28,6 @@ https://github.com/Unity-Technologies/arfoundation-samples
 
 <br />
 
-## ボルダリング
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mlX4a46xnyE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br />
-
-背面もトラッキングできてます。
-
-<br />
-
-## 逆立ち
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ThbvCFGuOUU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br />
-
-逆立ちは、、、途中までトラッキングし、、、幽体離脱。
-
-<br />
-
-## 腕立て
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/43FRd7fRTkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br />
-
-腕立ては、、、あんまりトラッキングできてないですね。
-
-<br />
-
-## 腹筋
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hoo_0x-w6kQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br />
-
-腹筋は全然だめですね。
-
-<br />
-
 これらの動画にはiPadProを使用していますが、iPhone11Proを使用しても似たようなトラッキング精度でした。
 
 <br />
