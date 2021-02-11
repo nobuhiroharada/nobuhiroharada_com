@@ -28,7 +28,7 @@ const IndexPage = () => {
 	`)
 	
 	const posts = data.allMarkdownRemark.edges
-	const postsPerPage = 5
+	const postsPerPage = 10
 	const numPages = Math.ceil(posts.length / postsPerPage)
 	const currentPage = 1
 
@@ -51,7 +51,7 @@ const IndexPage = () => {
 						return (
 							<li className={indexStyles.post} key={index}>
 								<Link to={`/blog/${edge.node.fields.slug}`}>
-									<h2>{edge.node.frontmatter.title}</h2>
+									<h3>{edge.node.frontmatter.title}</h3>
 									<p>{edge.node.frontmatter.date}</p>
 								</Link>
 							</li>

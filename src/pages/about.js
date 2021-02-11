@@ -10,18 +10,18 @@ const AboutPage = () => {
 		<Layout>
 			<Head title="About" description="About page"/>
 			<div className={aboutStyles.content}>
-				<h1>自己紹介</h1>
+				<h3>自己紹介</h3>
 				<p>はじめまして、原田順啓(はらだのぶひろ)と申します。</p>
 				<p>1982年生まれ。蠍座。</p>
-				<h1>スキル</h1>
+				<h3>スキル</h3>
 					<p>・言語：PHP, JavaScript, Swift</p>
 					<p>・フレームワーク：Laravel, Zend Framework</p>
 					<p>・データベース：MySQL, PostgreSQL</p>
 					<p>・OS：macOS, Linux, Windows</p>
 					<p>・その他：Git</p>
-				<h1>ポートフォリオサイト</h1>	
+				<h3>ポートフォリオサイト</h3>	
 					<a href="https://nobuhiroharada.github.io/portfolio-2/" rel="noreferrer noopener" target="_blank">ポートフォリオサイトへ</a>
-				<h1>経歴</h1>
+				<h3>経歴</h3>
 				<table>
 					<thead>
 						<tr>
