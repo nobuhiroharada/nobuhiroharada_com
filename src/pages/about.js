@@ -20,7 +20,8 @@ const AboutPage = () => {
 					<p>・OS：macOS, Linux, Windows</p>
 					<p>・その他：Git</p>
 				<h3>ポートフォリオサイト</h3>	
-					<a href="https://nobuhiroharada.github.io/portfolio-2/" rel="noreferrer noopener" target="_blank">ポートフォリオサイトへ</a>
+					<p><a href="https://nobuhiroharada.github.io/portfolio-3/" rel="noreferrer noopener" target="_blank">ポートフォリオサイトへ(Reactで作成)</a></p>
+					<p><a href="https://nobuhiroharada.github.io/portfolio-2/" rel="noreferrer noopener" target="_blank">ポートフォリオサイトへ(jQueryで作成)</a></p>
 				<h3>経歴</h3>
 				<table>
 					<thead>
